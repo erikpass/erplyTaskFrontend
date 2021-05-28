@@ -1,31 +1,16 @@
-# Getting Started with Create React App
+## Project for Erply task, using Erply api and Cafa api to load field data and save and load filled out forms.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+https://learn-api.erply.com/ 
 
-## Available Scripts
+https://api-cafa-demo.erply.com/index.html
 
-In the project directory, you can run:
+Login with Erply demo account.
+Fill out fields with data and submit,
+upon refresh or closing and reopening the page, field data should be fetched again and populate the fields.
 
-### `yarn start`
+##How to set up project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Download nodejs from https://nodejs.org/en/
+2. Download project and extract files into an empty folder, or clone project via cli into empty folder
+3. Open terminal at folder directory and run `npm i` to download all dependencies
+4. Once dependencies are all installed, run `npm run start` to run the project at localhost:3000
