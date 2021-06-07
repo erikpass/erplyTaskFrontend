@@ -44,7 +44,6 @@ export const FormMessageField: React.FC<MessageFieldProps> = ({ children, hide, 
   const [state, setState] = useState<MessageFieldProps>({ children, hide, type })
 
   useEffect(() => {
-    //console.log(hide, type, children)
     setState({ children, hide, type })
   }, [hide, type, children])
 

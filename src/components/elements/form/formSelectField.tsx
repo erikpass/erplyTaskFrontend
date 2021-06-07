@@ -117,6 +117,7 @@ export const FormSelectField: React.FC<SelectFieldInputs> = (props) => {
         setSelectValue(getOption)
       }
     }
+    // eslint-disable-next-line
   }, [values[name]])
 
 

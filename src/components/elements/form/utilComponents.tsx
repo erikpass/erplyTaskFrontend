@@ -6,9 +6,6 @@ import * as _ from "lodash"
 
 
 export const FormikCallback: React.FC<any> = (props) => {
-  //contents: "", type: "error", show: false })
-  //props?.success
-
 
   const successMessage = "Thank you! Your settings have been saved.";
   const errorMessage = "Oops! Something went wrong. Please review the form.";

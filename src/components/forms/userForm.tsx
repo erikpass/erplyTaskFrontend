@@ -63,13 +63,11 @@ export const UserForm: React.FC = () => {
 
   function saveSettings(jwt: string, value: any) {
     cafaPostRequest({ jwt, value })
-      .then((response) => console.log("cafa post", response?.data))
   }
 
   async function loadSettings(jwt: string) {
     const loadedValues = cafaGetRequest({ jwt })
     if (!(await loadedValues).data.length) {
-      console.log("No saved values found.")
       setReady(true)
     } else if ((await loadedValues).data[0]?.value) {
       setInitialValues((await loadedValues).data[0].value)
@@ -89,7 +87,7 @@ export const UserForm: React.FC = () => {
     const formWarehousesPromise = formRequest({ clientCode: state.clientCode, sessionKey: state.sessionKey, request: "getWarehouses" })
 
     Promise.all([formPaymentsPromise, formWarehousesPromise]).then(([formpayments, formwarehouses]: Array<any>) => {
-      //console.log(values)
+
       if (!!formpayments?.data?.records && !!formwarehouses?.data?.records) {
         const paymentsData: Array<any> = formpayments.data.records.map((record: any) => {
           const capitalizedName = record.name.charAt(0).toUpperCase() + record.name.slice(1)
@@ -100,11 +98,9 @@ export const UserForm: React.FC = () => {
         })
 
         setState({ ...state, warehouses: warehousesData, paymentTypes: paymentsData })
-        //console.log("Form selects api success.")
         loadSettings(state.jwt)
 
       } else {
-        //console.log("Form selects api fail.")
         logout()
       }
 

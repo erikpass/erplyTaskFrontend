@@ -38,7 +38,6 @@ export const LoginForm: React.FC = () => {
     const clientCode = data.clientCode
     authRequest(data)
       .then(data => {
-        //console.log(data?.data);
         if (data?.data?.records?.length) { //valid login
           setError(false)
           setSubmitting(false)
@@ -66,16 +65,6 @@ export const LoginForm: React.FC = () => {
       <Formik
         initialValues={initialLoginValues}
         validationSchema={validationSchema}
-        /* validate={(values) => {
-          const errors: Record<string, string> = {};
-
-          if (!values.clientCode) {
-            errors.clientCode = "Must have account number"
-          }
-
-          return errors
-
-        }} */
 
         onSubmit={(data, { setSubmitting }) => handleSubmit(data, setSubmitting)}
 
